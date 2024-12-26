@@ -14,6 +14,23 @@ else if (computerSelection == 1) {
 else if (computerSelection == 2) {
     return "Scissors";
 }
+}
 
+function getHumanChoice() {
+let humanChoice = prompt("Rock, Paper or Scissors?").toLowerCase();
+
+
+if (humanChoice == "rock") {
+    return "Rock";
+}
+else if (humanChoice == "paper") {
+    return "Paper";
+}
+else if (humanChoice == "scissors") {
+    return "Scissors"
+}
+else {
+    return "Invalid entry please restart program"
+}
 
 }
