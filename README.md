@@ -1,2 +1,2 @@
 # Rock-Paper-Scissors
-Project from 'The Odin Project' foundations course\
+Project from 'The Odin Project' foundations course
