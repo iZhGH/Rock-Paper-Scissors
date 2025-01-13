@@ -4,8 +4,11 @@ let choiceButtons = document.querySelector(".choiceButtons")
 playButton.addEventListener("click", ()=> {
     playButton.remove();
     const rockButton = document.createElement("button");
+    rockButton.classList.add("rock");
     const paperButton = document.createElement("button");
+    rockButton.classList.add("paper");
     const scissorsButton = document.createElement("button");
+    rockButton.classList.add("scissors");
 
     rockButton.textContent = "Rock";
     paperButton.textContent = "Paper";
