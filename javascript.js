@@ -18,6 +18,7 @@ playButton.addEventListener("click", ()=> {
     choiceButtons.appendChild(paperButton);
     choiceButtons.appendChild(scissorsButton);
 
+    choiceButtons.style.height= "100vh";
     choiceButtons.style.textAlign = "center";
     choiceButtons.style.display = "flex";
     choiceButtons.style.gap = "50px";
