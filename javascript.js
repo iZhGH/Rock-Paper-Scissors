@@ -4,11 +4,11 @@ function playGame() {
     let humanScore = 0;
     let computerScore  = 0;
 
-for (i = 0; i<5; i++) {
+/* //for (i = 0; i<5; i++) {
     humanSelection = getHumanChoice();
     computerSelecter = getComputerChoice();
     console.log(playRound(humanSelection,computerSelecter));
-}
+//} */
 
 if (humanScore > computerScore) {
     return "You win the game, " + humanScore + " to " + computerScore;
