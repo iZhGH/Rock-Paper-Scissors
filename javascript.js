@@ -1,10 +1,26 @@
-
-console.log(playGame());
-
 let playButton = document.querySelector(".playB");
+let choiceButtons = document.querySelector(".choiceButtons")
 
 playButton.addEventListener("click", ()=> {
     playButton.remove();
+    const rockButton = document.createElement("button");
+    const paperButton = document.createElement("button");
+    const scissorsButton = document.createElement("button");
+
+    rockButton.textContent = "Rock";
+    paperButton.textContent = "Paper";
+    scissorsButton.textContent = "Scissors";
+    
+    choiceButtons.appendChild(rockButton);
+    choiceButtons.appendChild(paperButton);
+    choiceButtons.appendChild(scissorsButton);
+
+    choiceButtons.style.textAlign = "center";
+    choiceButtons.style.display = "flex";
+    choiceButtons.style.gap = "50px";
+    choiceButtons.style.justifyContent = "center";
+    choiceButtons.style.alignItems = "center";
+
 })
 
 
