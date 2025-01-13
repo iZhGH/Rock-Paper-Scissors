@@ -1,4 +1,12 @@
+
 console.log(playGame());
+
+let playButton = document.querySelector(".playB");
+
+playButton.addEventListener("click", ()=> {
+    playButton.remove();
+})
+
 
 function playGame() {
     let humanScore = 0;
