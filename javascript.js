@@ -6,9 +6,9 @@ playButton.addEventListener("click", ()=> {
     const rockButton = document.createElement("button");
     rockButton.classList.add("rock");
     const paperButton = document.createElement("button");
-    rockButton.classList.add("paper");
+    paperButton.classList.add("paper");
     const scissorsButton = document.createElement("button");
-    rockButton.classList.add("scissors");
+    scissorsButton.classList.add("scissors");
 
     rockButton.textContent = "Rock";
     paperButton.textContent = "Paper";
