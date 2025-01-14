@@ -1,40 +1,37 @@
 let choiceButtons = document.querySelector(".choiceButtons")
+
 const rockButton = document.createElement("button");
 rockButton.classList.add("rock");
 const paperButton = document.createElement("button");
 paperButton.classList.add("paper");
-    const scissorsButton = document.createElement("button");
-    scissorsButton.classList.add("scissors");
-
-    rockButton.textContent = "Rock";
-    paperButton.textContent = "Paper";
-    scissorsButton.textContent = "Scissors";
-    
-    choiceButtons.appendChild(rockButton);
-    choiceButtons.appendChild(paperButton);
-    choiceButtons.appendChild(scissorsButton);
-
-    choiceButtons.style.height= "100vh";
-    choiceButtons.style.textAlign = "center";
-    choiceButtons.style.display = "flex";
-    choiceButtons.style.gap = "50px";
-    choiceButtons.style.justifyContent = "center";
-    choiceButtons.style.alignItems = "center";
+const scissorsButton = document.createElement("button");
+scissorsButton.classList.add("scissors");
 
 
+rockButton.textContent = "Rock";
+paperButton.textContent = "Paper";
+scissorsButton.textContent = "Scissors";
+choiceButtons.appendChild(rockButton);
+choiceButtons.appendChild(paperButton);
+choiceButtons.appendChild(scissorsButton);
+
+choiceButtons.style.height= "100vh";
+choiceButtons.style.textAlign = "center";
+choiceButtons.style.display = "flex";
+choiceButtons.style.gap = "50px";
+choiceButtons.style.justifyContent = "center";
+choiceButtons.style.alignItems = "center";
 
 
-rockButton.addEventListener("click", playRound());
-paperButton.addEventListener("click",playRound());
-scissorsButton.addEventListener("click",playRound());
+
+
 
 
 
 
 
 function playGame() {
-    let humanScore = 0;
-    let computerScore  = 0;
+
 
 /* //for (i = 0; i<5; i++) {
     humanSelection = getHumanChoice();
@@ -52,57 +49,62 @@ else {
     return "You tied the game! " + humanScore + " to " + computerScore;
 }
 
+}
+
+
+let humanScore = 0;
+let computerScore  = 0;
+
+let scoreBoard = document.querySelector(".score");
+scoreBoard.textContent = "You: " + humanScore + " - Computer: " + computerScore;
+
 
 
 
 function playRound(humanChoice) {
+computerChoice = getComputerChoice();
+
 if (humanChoice == computerChoice) {
-    return "Tie! You both chose " + humanChoice;
+    return console.log("Tie! You both chose " + humanChoice);
 }
-
-
-
-
-
 
 if (humanChoice == "Rock") {
     if (computerChoice == "Scissors") {
         humanScore++;
-        return "You win! " + humanChoice + " beats " + computerChoice;
+        return console.log("You win! " + humanChoice + " beats " + computerChoice);
     }
     else {
         computerScore++;
-        return "You lose! " + humanChoice + " does not beat " + computerChoice;
+        return console.log("You lose! " + humanChoice + " does not beat " + computerChoice);
     }
 }
 
 if (humanChoice == "Paper") {
     if (computerChoice == "Rock") {
         humanScore++;
-        return "You win! " + humanChoice + " beats " + computerChoice;
+        return console.log("You win! " + humanChoice + " beats " + computerChoice);
     }
     else {
         computerScore++;
-        return "You lose! " + humanChoice + " does not beat " + computerChoice;
+        return console.log("You lose! " + humanChoice + " does not beat " + computerChoice);
     }
 }
 
 if (humanChoice == "Scissors") {
     if (computerChoice == "Paper") {
         humanScore++;
-        return "You win! " + humanChoice + " beats " + computerChoice;
+        return console.log("You win! " + humanChoice + " beats " + computerChoice);
     }
     else {
         computerScore++;
-        return "You lose! " + humanChoice + " does not beat " + computerChoice;
+        return console.log("You lose! " + humanChoice + " does not beat " + computerChoice);
     }
 }
 
-return "Error has occured";
+return console.log("Error has occured");
 
 }
 
-}
 
 
 function getComputerChoice() { // Get computers random choice of R, P or S.
@@ -141,3 +143,14 @@ else {
 }
 
 }
+
+
+
+rockButton.addEventListener("click", function() { 
+    playRound("Rock")});
+
+paperButton.addEventListener("click", function() { 
+    playRound("Paper") });
+
+scissorsButton.addEventListener("click", function() {
+     playRound("Scissors") });
