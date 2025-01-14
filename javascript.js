@@ -1,12 +1,8 @@
-let playButton = document.querySelector(".playB");
 let choiceButtons = document.querySelector(".choiceButtons")
-
-playButton.addEventListener("click", ()=> {
-    playButton.remove();
-    const rockButton = document.createElement("button");
-    rockButton.classList.add("rock");
-    const paperButton = document.createElement("button");
-    paperButton.classList.add("paper");
+const rockButton = document.createElement("button");
+rockButton.classList.add("rock");
+const paperButton = document.createElement("button");
+paperButton.classList.add("paper");
     const scissorsButton = document.createElement("button");
     scissorsButton.classList.add("scissors");
 
@@ -25,7 +21,15 @@ playButton.addEventListener("click", ()=> {
     choiceButtons.style.justifyContent = "center";
     choiceButtons.style.alignItems = "center";
 
-})
+
+
+
+rockButton.addEventListener("click", playRound());
+paperButton.addEventListener("click",playRound());
+scissorsButton.addEventListener("click",playRound());
+
+
+
 
 
 function playGame() {
@@ -48,10 +52,18 @@ else {
     return "You tied the game! " + humanScore + " to " + computerScore;
 }
 
-function playRound(humanChoice,computerChoice) {
+
+
+
+function playRound(humanChoice) {
 if (humanChoice == computerChoice) {
     return "Tie! You both chose " + humanChoice;
 }
+
+
+
+
+
 
 if (humanChoice == "Rock") {
     if (computerChoice == "Scissors") {
